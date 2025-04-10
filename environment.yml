@@ -7,6 +7,8 @@ dependencies:
   - pip:
       - azure-ai-ml
       - azure-identity
+      - mlflow
+      - azureml-mlflow
       - cvxpy
       - joblib
       - matplotlib
