@@ -7,19 +7,19 @@ with open('config.json', 'r') as f:
     config = json.load(f)
 
 subscription_id = config["subscription_id"]
-resource_group = config["resource_group"]
+resource_group_name = config["resource_group_name"]
 workspace_name = config["workspace_name"]
 
 # Authenticate and create the ML client
 credential = DefaultAzureCredential()
-ml_client = MLClient(credential, subscription_id, resource_group, workspace_name)
+ml_client = MLClient(credential, subscription_id, resource_group_name, workspace_name)
 
 # Create an environment object using the conda file
 env = Environment(
-    name="my-ml-env",
+    name="quantifier-recommender-env",
     conda_file="./environment.yml",
     image="mcr.microsoft.com/azureml/base:latest",
-    description="A sample environment with Python, scikit-learn, pandas, and numpy"
+    description="An environment to run experiments of the Quantifier Recommender project."
 )
 
 # Register (or update) the environment in your workspace

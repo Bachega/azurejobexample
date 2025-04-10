@@ -18,9 +18,9 @@ ml_client = MLClient(credential, subscription_id=subscription_id,
 
 # Define the job
 job = command(
-    code="./src",  # Directory containing your source code
-    command="python test_azure_job.py",
-    environment="my-ml-env:1",
+    code="../quantifier_recommender",  # Directory containing your source code
+    command="python __run_experiments.py",
+    environment="quantifier-recommender-env:2",
     compute=compute
 )
 

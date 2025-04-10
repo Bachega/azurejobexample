@@ -1,12 +1,20 @@
-name: my-ml-env
+name: quantifier-recommender-env
 channels:
   - defaults
 dependencies:
-  - python=3.8
-  - scikit-learn
-  - pandas
-  - numpy
+  - python=3.10
   - pip
   - pip:
       - azure-ai-ml
       - azure-identity
+      - cvxpy
+      - joblib
+      - matplotlib
+      - mlquantify
+      - numpy
+      - pandas
+      - pymfe
+      - QuaPy
+      - scikit-learn
+      - seaborn
+      - xgboost
