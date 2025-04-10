@@ -20,7 +20,7 @@ ml_client = MLClient(credential, subscription_id=subscription_id,
 job = command(
     code="../quantifier_recommender",  # Directory containing your source code
     command="python __run_experiments.py",
-    environment="quantifier-recommender-env:10",
+    environment="quantifier-recommender-env:11",
     compute=compute
 )
 
